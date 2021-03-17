@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.EntityFrameworkCore;
+using TestWork.Models;
 
 namespace TestWork
 {
@@ -24,6 +26,16 @@ namespace TestWork
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddDbContext<DBContext>
+            (item => item.UseSqlServer
+            (Configuration.GetConnectionString("TestworkConnection")));
+           
+           
+            // String strConnString ="";
+		    // strConnString = "Server=127.0.0.1;User Id=root; Password=; Database=posstock_nun; Pooling=false";
+            //  services.AddDbContext<UserContext>(options => options.UseMySQL(TestworkConnection));
+            
+         
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -50,7 +62,7 @@ namespace TestWork
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Main}/{action=Main}/{id?}");
             });
         }
     }

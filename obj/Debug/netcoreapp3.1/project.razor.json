@@ -14407,6 +14407,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\inetpub\\wwwroot\\TestWork\\Views\\Main\\Main.cshtml",
+      "TargetPath": "Views\\Main\\Main.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\inetpub\\wwwroot\\TestWork\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "FileKind": "mvc"
