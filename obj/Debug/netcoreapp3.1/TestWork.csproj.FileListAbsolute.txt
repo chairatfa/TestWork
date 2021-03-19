@@ -63,6 +63,7 @@ C:\inetpub\wwwroot\TestWork\obj\Debug\netcoreapp3.1\TestWork.TagHelpers.output.c
 C:\inetpub\wwwroot\TestWork\obj\Debug\netcoreapp3.1\TestWork.RazorCoreGenerate.cache
 C:\inetpub\wwwroot\TestWork\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
 C:\inetpub\wwwroot\TestWork\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
+C:\inetpub\wwwroot\TestWork\obj\Debug\netcoreapp3.1\Razor\Views\Main\Main.cshtml.g.cs
 C:\inetpub\wwwroot\TestWork\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
 C:\inetpub\wwwroot\TestWork\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\inetpub\wwwroot\TestWork\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
@@ -77,4 +78,3 @@ C:\inetpub\wwwroot\TestWork\obj\Debug\netcoreapp3.1\staticwebassets\TestWork.Sta
 C:\inetpub\wwwroot\TestWork\obj\Debug\netcoreapp3.1\TestWork.dll
 C:\inetpub\wwwroot\TestWork\obj\Debug\netcoreapp3.1\TestWork.pdb
 C:\inetpub\wwwroot\TestWork\obj\Debug\netcoreapp3.1\TestWork.genruntimeconfig.cache
-C:\inetpub\wwwroot\TestWork\obj\Debug\netcoreapp3.1\Razor\Views\Main\Main.cshtml.g.cs

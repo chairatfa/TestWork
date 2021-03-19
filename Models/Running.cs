@@ -15,7 +15,7 @@ namespace TestWork.Models
         #region 
         // Code สำหรับนำไปใช้ check เงื่อนไขในการ where 
         #endregion  
-        [Column(TypeName = "varchar(20)")]       
+        [Column(TypeName = "varchar(4)")]       
         public string RunningCode { get; set; }
 
         #region 

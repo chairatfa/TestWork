@@ -17,7 +17,8 @@
     <link rel="stylesheet" href="../team/dist/css/adminlte.min.css">
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
-
+    
+    <script src="../team/vendor/jquery.js"></script>
    
 </head>
 <body>
@@ -44,6 +45,7 @@
     </header>
     <div class="container">
         <main role="main" class="pb-3">
+         
             @RenderBody()
         </main>
     </div>
@@ -54,11 +56,10 @@
         </div>
     </footer>
   
-    <!-- jQuery -->
-    <script src="../team/plugins/jquery/jquery.min.js"></script>
+   
     <!-- Bootstrap 4 -->
     <script src="../team/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- DataTables -->
+    <!-- DataTables -->    
     <script src="../team/plugins/datatables/jquery.dataTables.min.js"></script>   
     <script src="../team/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
     <script src="../team/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
@@ -73,7 +74,7 @@
     
     @* <script src="~/js/site.js" asp-append-version="true"></script> *@
     @* @RenderSection("Scripts", required: false) *@
-<!-- jquery-validation -->
+
 
 </body>
 </html>

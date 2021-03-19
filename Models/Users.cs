@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace TestWork.Models
 {
+     [Table("Users")]
     public class Users
     {
         #region 

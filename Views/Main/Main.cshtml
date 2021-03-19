@@ -5,13 +5,23 @@
     .labelSetLeft{
        float: left;
     }
-
-    .iconedit:link {
+ .iconedit{
+    color: green;
+ }
+   .iconedit:link {
     color: red;
         }
 
         /* mouse over link */
     .iconedit:hover {
+     color: #ffbb00;
+        }
+    .icondelete{
+    color: red;
+        }
+
+        /* mouse over link */
+    .icondelete:hover {
      color: #ffbb00;
         }
     </style>
@@ -26,36 +36,28 @@
              <!-- card-header -->                
               <div class="card-header">
                    @* <h3 class="card-title">DataTable with default features</h3> *@
-                   <button type="button" id ="btn_addUser" class="btn btn-primary card-title" data-toggle="modal" data-target="#myModal">เพิ่มเจ้าของ</button>                 
+                   <button type="button" id ="btn_addUser" class="btn btn-primary card-title" data-toggle="modal" data-target="#myModal_Ins">เพิ่มเจ้าของ</button>                 
               </div>
               <!-- /.card-header -->
               <!-- card-body -->
              <div>
               <div class="card-body">
-                <div id="example2_wrapper" class="dataTables_wrapper dt-bootstrap4">
-                    <div class="row"><div class="col-sm-12 col-md-6"></div>
-                    <div class="col-sm-12 col-md-6"></div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-12 table-responsive">
-                        <table id="example2" class="table table-bordered table-hover dataTable dtr-inline" role="grid" aria-describedby="example2_info">
-                  <thead>
-                  <tr role="row">
-                      <th class="sorting_asc" tabindex="0" aria-controls="example2" rowspan="1" colspan="1">Operation</th>
-                      <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" >HN เจ้าของ</th>
-                      <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1">ชื่อเจ้าของ</th>
-                      <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1">เบอร์ติดต่อ</th>
-                      <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" >อีเมลล์</th></tr>
-                  </thead>
-                  <tbody>
-                  <tr role="row" class="odd">
-                    <td style=" cursor:hand;" > <i class="fa fa-address-card iconedit" style="font-size:160%;" title="แก้ไข" data-toggle="modal" data-target="#myModal1"></i></td>
-                    <td>Firefox 1.0</td>
-                    <td style="">Win 98+ / OSX.2+</td>
-                    <td style="">1.7</td>
-                    <td style="">A</td>
-                  </tr></tbody>                
-                </table></div></div><div class="row"><div class="col-sm-12 col-md-5"><div class="dataTables_info" id="example2_info" role="status" aria-live="polite">Showing 1 to 10 of 57 entries</div></div><div class="col-sm-12 col-md-7"><div class="dataTables_paginate paging_simple_numbers" id="example2_paginate"><ul class="pagination"><li class="paginate_button page-item previous disabled" id="example2_previous"><a href="#" aria-controls="example2" data-dt-idx="0" tabindex="0" class="page-link">Previous</a></li><li class="paginate_button page-item active"><a href="#" aria-controls="example2" data-dt-idx="1" tabindex="0" class="page-link">1</a></li><li class="paginate_button page-item "><a href="#" aria-controls="example2" data-dt-idx="2" tabindex="0" class="page-link">2</a></li><li class="paginate_button page-item "><a href="#" aria-controls="example2" data-dt-idx="3" tabindex="0" class="page-link">3</a></li><li class="paginate_button page-item "><a href="#" aria-controls="example2" data-dt-idx="4" tabindex="0" class="page-link">4</a></li><li class="paginate_button page-item "><a href="#" aria-controls="example2" data-dt-idx="5" tabindex="0" class="page-link">5</a></li><li class="paginate_button page-item "><a href="#" aria-controls="example2" data-dt-idx="6" tabindex="0" class="page-link">6</a></li><li class="paginate_button page-item next" id="example2_next"><a href="#" aria-controls="example2" data-dt-idx="7" tabindex="0" class="page-link">Next</a></li></ul></div></div></div></div>
+                <div id="example1_wrapper" class="dataTables_wrapper dt-bootstrap4">                            
+                  <table id="example1" class="table table-bordered table-striped dataTable dtr-inline" role="grid" aria-describedby="example1_info"  width="100%" cellspacing="0">
+                    <thead>
+                    <tr role="row">
+                        
+                        <th class="sorting_asc" tabindex="0" aria-controls="example2" rowspan="1" colspan="1">Operation</th>
+                        <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" >HN เจ้าของ</th>
+                        <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1">ชื่อเจ้าของ</th>
+                        <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1">เบอร์ติดต่อ</th>
+                        <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" >อีเมลล์</th>
+                    </tr>
+                    </thead>
+                    <tbody id="tb_user"></tbody>
+                  
+                  </table>
+                </div>
               </div>
               <!-- /.card-body -->
             </div>
@@ -63,7 +65,7 @@
 
             @* Modal  Strat for Add USer  *@
             <!-- Modal -->
-            <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal fade" id="myModal_Ins" role="dialog">
                 <div class="modal-dialog">                
                 <!-- Modal content-->
                 <div class="modal-content">
@@ -96,29 +98,29 @@
                                         <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="fa fa-user"></i></span>
                                         </div>
-                                      <input type="textbox" id="FirstName" name="FirstName" class="form-control form-control-block"  placeholder="ชื่อ">
+                                      <input type="textbox" id="FirstName" name="FirstName" class="form-control form-control-block" maxlength="50" placeholder="ชื่อ">
                                     </div>                               
                                 </div>
                                  <!-- ชื่อ -->
                                  <!-- นามสกุล -->
                                 <div class="form-group">
-                                    <font class="labelSetLeft" color="red">*</font><label class="labelSetLeft"  >นามสกุล</label>
+                                    <font class="labelSetLeft" color="red">*</font><label class="labelSetLeft" >นามสกุล</label>
                                     <div class="input-group">
                                         <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="fa fa-user"></i></span>
                                         </div>
-                                      <input type="textbox" id="LastName" name="LastName" class="form-control form-control-block"  placeholder="นามสกุล">
+                                      <input type="textbox" id="LastName" name="LastName" class="form-control form-control-block"  maxlength="50"  placeholder="นามสกุล">
                                     </div>                               
                                 </div>
                                  <!-- นามสกุล -->
                                   <!-- เบอร์โทร -->
                                 <div class="form-group">
-                                    <font class="labelSetLeft" color="red">*</font><label class="labelSetLeft"  >เบอร์โทร</label>
+                                    <font class="labelSetLeft" color="red">*</font><label class="labelSetLeft" >เบอร์โทร</label>
                                     <div class="input-group">
                                         <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="fa fa-envelope"></i></span>
                                         </div>
-                                      <input type="textbox" id="TelNumber" name="TelNumber" class="form-control form-control-block"  placeholder="เบอร์โทร">
+                                      <input type="number" id="TelNumber" name="TelNumber" class="form-control form-control-block" maxlength="50" placeholder="เบอร์โทร">
                                     </div>                               
                                 </div>
                                  <!-- เบอร์โทร -->
@@ -152,7 +154,7 @@
 
             @* Modal  Strat for edit USer  *@
             <!-- Modal -->
-            <div class="modal fade" id="myModal1" role="dialog">
+            <div class="modal fade" id="myModal_Edit" role="dialog">
                 <div class="modal-dialog">                
                 <!-- Modal content-->
                 <div class="modal-content">
@@ -162,7 +164,7 @@
                     </div>
                     <div class="modal-body">
                     @* form Strat Add User *@
-                       <div class="card card-primary">
+                       <div class="card card-success">
                             <div class="card-header">
                                 <h3 class="card-title">เจ้าของ</h3>
                             </div>
@@ -174,7 +176,8 @@
                                         <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
                                         </div>
-                                      <input type="textbox"  id="UserCode" name="UserCode" class="form-control form-control-block" visible="false" placeholder="HN">
+                                      <input type="hidden"  id="UserCode_e" name="UserCode_e" class="form-control form-control-block"  placeholder="HN">
+                                      <input type="textbox"  id="UserCode_e1" name="UserCode_e1" class="form-control form-control-block" disabled placeholder="HN">
                                     </div>                               
                                 </div>
                                  <!-- ชื่อ -->
@@ -185,7 +188,7 @@
                                         <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="fa fa-user"></i></span>
                                         </div>
-                                      <input type="textbox" id="FirstName" name="FirstName" class="form-control form-control-block"  placeholder="ชื่อ">
+                                      <input type="textbox" id="FirstName_e" name="FirstName_e" class="form-control form-control-block" maxlength="50" placeholder="ชื่อ">
                                     </div>                               
                                 </div>
                                  <!-- ชื่อ -->
@@ -196,7 +199,7 @@
                                         <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="fa fa-user"></i></span>
                                         </div>
-                                      <input type="textbox" id="LastName" name="LastName" class="form-control form-control-block"  placeholder="นามสกุล">
+                                      <input type="textbox" id="LastName_e" name="LastName_e" class="form-control form-control-block" maxlength="50" placeholder="นามสกุล">
                                     </div>                               
                                 </div>
                                  <!-- นามสกุล -->
@@ -207,7 +210,7 @@
                                         <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="fa fa-envelope"></i></span>
                                         </div>
-                                      <input type="textbox" id="TelNumber" name="TelNumber" class="form-control form-control-block"  placeholder="เบอร์โทร">
+                                      <input type="textbox" id="TelNumber_e" name="TelNumber_e" class="form-control form-control-block"  placeholder="เบอร์โทร">
                                     </div>                               
                                 </div>
                                  <!-- เบอร์โทร -->
@@ -218,7 +221,7 @@
                                         <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
                                         </div>
-                                      <input type="textbox" id="Email2" name="Email2" class="form-control form-control-block"  placeholder="Email">
+                                      <input type="textbox" id="Email_e" name="Email_e" class="form-control form-control-block"  placeholder="Email">
                                     </div>                               
                                 </div>
                                  <!-- Email -->
@@ -228,7 +231,7 @@
                     @* form end Add User *@
                     </div>
                     <div class="modal-footer">
-                    <button type="button" id="btnEditSave" class="btn btn-primary" >บันทึก</button>
+                    <button type="button" id="btnEditSave" class="btn btn-success" >บันทึก</button>
                     <button type="button" class="btn btn-default" data-dismiss="modal">ปิด</button>
                     </div>
                 </div>
@@ -236,6 +239,93 @@
                 </div>
             </div>
             @* Modal  emd for edit USer  *@
+
+
+            @* Modal  Strat for Delete USer  *@
+            <!-- Modal -->
+            <div class="modal fade" id="myModal_Delete" role="dialog">
+                <div class="modal-dialog">                
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h4 id="modetitleFrom"class="modal-title">ลบข้อมูล</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>                    
+                    </div>
+                    <div class="modal-body">                  
+                       <div class="card card-danger">
+                            <div class="card-header">
+                                <h3 class="card-title">เจ้าของ</h3>
+                            </div>
+                            <div class="card-body">
+                                <!-- ชื่อ -->
+                                <div class="form-group" >
+                                    <label class="labelSetLeft"  >HN</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
+                                        </div>
+                                      <input type="hidden"  id="UserCode_d" name="UserCode_d" class="form-control form-control-block"  placeholder="HN">
+                                      <input type="textbox"  id="UserCode_d1" name="UserCode_d1" class="form-control form-control-block" disabled placeholder="HN">
+                                    </div>                               
+                                </div>
+                                 <!-- ชื่อ -->
+                                <!-- ชื่อ -->
+                                <div class="form-group">
+                                    <h1></h1><font class="labelSetLeft" color="red">*</font></h1><label class="labelSetLeft"  >ชื่อ</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fa fa-user"></i></span>
+                                        </div>
+                                      <input type="textbox" id="FirstName_d" name="FirstName_d" class="form-control form-control-block" maxlength="50" disabled placeholder="ชื่อ">
+                                    </div>                               
+                                </div>
+                                 <!-- ชื่อ -->
+                                 <!-- นามสกุล -->
+                                <div class="form-group">
+                                    <font class="labelSetLeft" color="red">*</font><label class="labelSetLeft"  >นามสกุล</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fa fa-user"></i></span>
+                                        </div>
+                                      <input type="textbox" id="LastName_d" name="LastName_d" class="form-control form-control-block" maxlength="50" disabled placeholder="นามสกุล">
+                                    </div>                               
+                                </div>
+                                 <!-- นามสกุล -->
+                                  <!-- เบอร์โทร -->
+                                <div class="form-group">
+                                    <font class="labelSetLeft" color="red">*</font><label class="labelSetLeft"  >เบอร์โทร</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fa fa-envelope"></i></span>
+                                        </div>
+                                      <input type="textbox" id="TelNumber_d" name="TelNumber_d" class="form-control form-control-block"  disabled placeholder="เบอร์โทร">
+                                    </div>                               
+                                </div>
+                                 <!-- เบอร์โทร -->
+                                 <!-- Email -->
+                                <div class="form-group">
+                                    <font class="labelSetLeft" color="red">*</font><label class="labelSetLeft"  >Email</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
+                                        </div>
+                                      <input type="textbox" id="Email_d" name="Email_d" class="form-control form-control-block" disabled  placeholder="Email">
+                                    </div>                               
+                                </div>
+                                 <!-- Email -->
+                            </div>
+                            <!-- /.card-body -->
+                        </div>                   
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" id="btnDltSave" class="btn btn-danger" >ยืนยัน</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">ปิด</button>
+                    </div>
+                </div>
+                
+                </div>
+            </div>
+            @* Modal  end for Delete USer  *@
             
             <!-- /.card -->
           </div>
@@ -246,8 +336,16 @@
       <!-- /.container-fluid -->
     </section>
 </div>
-<script src="../team/plugins/jquery/jquery.min.js"></script>
-<script src="../Mainjs/MainInsert.js"></script>
-<script  type="text/javascript">
 
-</script>
+    
+    <!-- page script -->
+    <script src="../Mainjs/MainInsert.js"></script>
+    @* <script>
+  $(function () {
+    $("#example1").DataTable({
+      "responsive": true,
+      "autoWidth": false,
+    });
+   
+  });
+</script> *@

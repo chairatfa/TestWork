@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.EntityFrameworkCore;
+
 using TestWork.Models;
 
 namespace TestWork
@@ -26,14 +26,11 @@ namespace TestWork
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-            services.AddDbContext<DBContext>
-            (item => item.UseSqlServer
-            (Configuration.GetConnectionString("TestworkConnection")));
+            // services.AddDbContext<DBContext>
+            // (options => options.UseSqlServer
+            // (Configuration.GetConnectionString("TestworkConnection")));
            
            
-            // String strConnString ="";
-		    // strConnString = "Server=127.0.0.1;User Id=root; Password=; Database=posstock_nun; Pooling=false";
-            //  services.AddDbContext<UserContext>(options => options.UseMySQL(TestworkConnection));
             
          
         }

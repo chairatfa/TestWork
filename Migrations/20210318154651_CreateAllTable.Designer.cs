@@ -10,8 +10,8 @@ using TestWork.Models;
 namespace TestWork.Migrations
 {
     [DbContext(typeof(DBContext))]
-    [Migration("20210317141409_CreateTableAll")]
-    partial class CreateTableAll
+    [Migration("20210318154651_CreateAllTable")]
+    partial class CreateAllTable
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
