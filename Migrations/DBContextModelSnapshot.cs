@@ -33,7 +33,7 @@ namespace TestWork.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("RunningCode")
-                        .HasColumnType("varchar(20)");
+                        .HasColumnType("varchar(4)");
 
                     b.Property<string>("RunningDes")
                         .HasColumnType("varchar(50)");

@@ -10,8 +10,8 @@ using TestWork.Models;
 namespace TestWork.Migrations
 {
     [DbContext(typeof(DBContext))]
-    [Migration("20210318154651_CreateAllTable")]
-    partial class CreateAllTable
+    [Migration("20210319153150_CreateInit")]
+    partial class CreateInit
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -35,7 +35,7 @@ namespace TestWork.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("RunningCode")
-                        .HasColumnType("varchar(20)");
+                        .HasColumnType("varchar(4)");
 
                     b.Property<string>("RunningDes")
                         .HasColumnType("varchar(50)");

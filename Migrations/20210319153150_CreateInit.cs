@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace TestWork.Migrations
 {
-    public partial class CreateAllTable : Migration
+    public partial class CreateInit : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -13,7 +13,7 @@ namespace TestWork.Migrations
                 {
                     RunningId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    RunningCode = table.Column<string>(type: "varchar(20)", nullable: true),
+                    RunningCode = table.Column<string>(type: "varchar(4)", nullable: true),
                     RunningDes = table.Column<string>(type: "varchar(50)", nullable: true),
                     RunningPrefix = table.Column<string>(type: "varchar(50)", nullable: true),
                     RunningYear = table.Column<string>(type: "varchar(5)", nullable: true),

@@ -71,7 +71,8 @@ namespace TestWork.Controllers
         #endregion
 
         #region Check validate of Input       
-        public String CheckInput(Users _user){
+        public String CheckInput(Users _user)
+        {
             string result ="";
             if (String.IsNullOrEmpty(_user.FirstName)){throw new CustomException("FirstName-"+"กรุณากรอกชื่อ");}
             if (String.IsNullOrEmpty(_user.LastName)){throw new CustomException("LastName-"+"กรุณากรอกนามสกุล");}

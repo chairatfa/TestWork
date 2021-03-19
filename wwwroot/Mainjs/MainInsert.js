@@ -1,6 +1,5 @@
 
-$( document ).ready(function() {
-    
+$( document ).ready(function() {    
     LoadData();
 });
 
@@ -206,9 +205,9 @@ function LoadData() {
                              }
                         },
                         {
-                            data: { UserCode: 'UserCode' },
+                            data: { Fullname: 'Fullname' },
                             render: function(data) {
-                                return '<td>' +data.UserCode + '</td>';
+                                return '<td>' +data.Fullname + '</td>';
                              }
                         },
                         {

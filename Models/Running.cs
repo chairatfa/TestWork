@@ -4,6 +4,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace TestWork.Models
 {
+    
+     [Table("Running")]
     public class Running
     {
         #region 

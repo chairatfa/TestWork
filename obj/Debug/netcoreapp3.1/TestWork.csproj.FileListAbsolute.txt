@@ -1,3 +1,10 @@
+C:\inetpub\wwwroot\TestWork\obj\Debug\netcoreapp3.1\TestWork.csprojAssemblyReference.cache
+C:\inetpub\wwwroot\TestWork\obj\Debug\netcoreapp3.1\TestWork.AssemblyInfoInputs.cache
+C:\inetpub\wwwroot\TestWork\obj\Debug\netcoreapp3.1\TestWork.AssemblyInfo.cs
+C:\inetpub\wwwroot\TestWork\obj\Debug\netcoreapp3.1\TestWork.csproj.CoreCompileInputs.cache
+C:\inetpub\wwwroot\TestWork\obj\Debug\netcoreapp3.1\TestWork.MvcApplicationPartsAssemblyInfo.cache
+C:\inetpub\wwwroot\TestWork\obj\Debug\netcoreapp3.1\TestWork.RazorAssemblyInfo.cache
+C:\inetpub\wwwroot\TestWork\obj\Debug\netcoreapp3.1\TestWork.RazorAssemblyInfo.cs
 C:\inetpub\wwwroot\TestWork\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\inetpub\wwwroot\TestWork\bin\Debug\netcoreapp3.1\appsettings.json
 C:\inetpub\wwwroot\TestWork\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
@@ -51,13 +58,6 @@ C:\inetpub\wwwroot\TestWork\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Micr
 C:\inetpub\wwwroot\TestWork\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
 C:\inetpub\wwwroot\TestWork\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\inetpub\wwwroot\TestWork\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\inetpub\wwwroot\TestWork\obj\Debug\netcoreapp3.1\TestWork.csprojAssemblyReference.cache
-C:\inetpub\wwwroot\TestWork\obj\Debug\netcoreapp3.1\TestWork.AssemblyInfoInputs.cache
-C:\inetpub\wwwroot\TestWork\obj\Debug\netcoreapp3.1\TestWork.AssemblyInfo.cs
-C:\inetpub\wwwroot\TestWork\obj\Debug\netcoreapp3.1\TestWork.csproj.CoreCompileInputs.cache
-C:\inetpub\wwwroot\TestWork\obj\Debug\netcoreapp3.1\TestWork.MvcApplicationPartsAssemblyInfo.cache
-C:\inetpub\wwwroot\TestWork\obj\Debug\netcoreapp3.1\TestWork.RazorAssemblyInfo.cache
-C:\inetpub\wwwroot\TestWork\obj\Debug\netcoreapp3.1\TestWork.RazorAssemblyInfo.cs
 C:\inetpub\wwwroot\TestWork\obj\Debug\netcoreapp3.1\TestWork.TagHelpers.input.cache
 C:\inetpub\wwwroot\TestWork\obj\Debug\netcoreapp3.1\TestWork.TagHelpers.output.cache
 C:\inetpub\wwwroot\TestWork\obj\Debug\netcoreapp3.1\TestWork.RazorCoreGenerate.cache
