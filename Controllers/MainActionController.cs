@@ -231,7 +231,7 @@ namespace TestWork.Controllers
                     _response.ResponseCode="1";
                     _response.ResponseMessage="OK";
                  }else{
-                    throw new CustomException("ขออภัยขอมูลผิดพลาด ไม่พบรายการ");
+                    throw new CustomException("ขออภัยข้อมูลผิดพลาด ไม่พบรายการ");
                  }
             } 
             catch (CustomException cex)
